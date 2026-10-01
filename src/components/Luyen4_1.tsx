@@ -1,10 +1,18 @@
 import { Text,StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { useRef } from 'react'
 
 const Baitap5 = () => {
   const [a, setA] = React.useState('');
   const [b, setB] = React.useState('');
   const [result, setResult] = React.useState('');
+  const inputARef = useRef<TextInput>(null);
+  const handleClear = () => {
+    setA('');
+    setB('');
+    setResult('');
+    inputARef.current?.focus(); 
+  };
   const xuLy = () => {
     const numA = parseFloat(a);
     const numB = parseFloat(b);
@@ -20,15 +28,14 @@ const Baitap5 = () => {
       }
     } else {
       const x = -numB / numA;
-      setResult(x.toString()); 
       setResult(x.toFixed(2)); // làm tròn 2 chữ số: dùng toFixed(2)
-
     }
-  };
+    };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Giải phương trình bậc nhất ax+b=0</Text>
       <TextInput style={styles.input}
+        ref={inputARef}
         placeholder="Nhập số a: "
         keyboardType="numeric"
         value={a}
@@ -45,7 +52,7 @@ const Baitap5 = () => {
                 <TouchableOpacity style={styles.button} onPress={xuLy}>
                     <Text style={styles.buttonText}>Giải pt</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.button, {backgroundColor: 'red'}]} onPress={() => {setA(''); setB(''); setResult('');}}>
+                <TouchableOpacity style={[styles.button, {backgroundColor: 'red'}]} onPress={handleClear}>
                     <Text style={styles.buttonText}>Xóa</Text>
                 </TouchableOpacity>
           </View>
