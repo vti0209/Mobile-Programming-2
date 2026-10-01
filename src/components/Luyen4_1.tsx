@@ -113,6 +113,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     width: '100%',
-    gap: 20,
+    gap: 20, // hoặc dùng marginHorizontal: 10 cho mỗi nút
   },
 });

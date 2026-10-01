@@ -1,20 +1,20 @@
-// import Baitap1 from './src/components/Baitap1';
-// import Baitap2 from './src/components/Baitap2';
-// import Baitap3 from './src/components/Baitap3';
-// import Baitap4 from './src/components/Baitap4';
-// import Baitap31 from './src/components/Luyen3_1';
-import Baitap5 from "./src/components/Luyen4_1";
+// // import Baitap1 from './src/components/Baitap1';
+// // import Baitap2 from './src/components/Baitap2';
+// // import Baitap3 from './src/components/Baitap3';
+// // import Baitap4 from './src/components/Baitap4';
+// // import Baitap31 from './src/components/Luyen3_1';
+// import Baitap5 from "./src/components/Luyen4_1";
 
-const App = () => {
-  // return <Baitap2 name="Hồ Văn Tiết" age={20} />;
-  // return <Baitap1 />;
-  // return <Baitap3 />;
-  // return <Baitap4 />;
-  // return <Baitap31 />;
-  return <Baitap5 />;
-};
+// const App = () => {
+//   // return <Baitap2 name="Hồ Văn Tiết" age={20} />;
+//   // return <Baitap1 />;
+//   // return <Baitap3 />;
+//   // return <Baitap4 />;
+//   // return <Baitap31 />;
+//   return <Baitap5 />;
+// };
 
-export default App;
+// export default App;
 
 // import React, {useState} from 'react';
 // import {Text, View, StyleSheet} from 'react-native';
@@ -53,3 +53,17 @@ export default App;
 // });
 
 // export default App;
+
+import React from 'react';
+import {View} from 'react-native';
+import ChaComponent from './src/components/chaComponent';
+
+const App = () => {
+  return (
+    <View style={{flex: 1}}>
+      <ChaComponent />
+    </View>
+  );
+};
+
+export default App;
