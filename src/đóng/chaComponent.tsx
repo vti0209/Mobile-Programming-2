@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 
-import ConComponent from './conComponent';
+import ConComponent from '../đóng/conComponent';
 
 const ChaComponent = () => {
   const [a, setA] = useState('');

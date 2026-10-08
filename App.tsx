@@ -54,14 +54,42 @@
 
 // export default App;
 
+// import React from 'react';
+// import {View} from 'react-native';
+// import ChaComponent from './src/components/chaComponent';
+
+// const App = () => {
+//   return (
+//     <View style={{flex: 1}}>
+//       <ChaComponent />
+//     </View>
+//   );
+// };
+
+// export default App;
+
+// import React from 'react';
+// import Giaiptb1 from './src/components/Giaiptb1';
+// import { View } from 'react-native';
+
+// const App = () => {
+//   return (
+//     <View style={{flex: 1}}>
+//       <Giaiptb1 />
+//     </View>
+//   );
+// };
+
+// export default App;
+
 import React from 'react';
-import {View} from 'react-native';
-import ChaComponent from './src/components/chaComponent';
+import { View } from 'react-native';
+import TenCha from './src/components/TenCha';
 
 const App = () => {
   return (
-    <View style={{flex: 1}}>
-      <ChaComponent />
+    <View style={{ flex: 1, padding: 10 }}>
+      <TenCha />
     </View>
   );
 };
